@@ -17,6 +17,7 @@ class CreateArtistsTable extends Migration
             $table->bigIncrements('id');
             $table->string('slug');
             $table->string('name');
+            $table->string('location');
             $table->timestamps();
         });
     }

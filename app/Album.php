@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Album extends Model
 {
-    // public function path()
-    // {
-    //     return route('albums.show', $this);
-    // }
+    protected $guarded = [];
+    
+    public function path()
+    {
+        return route('albums.show', $this);
+    }
 
     public function getRouteKeyName()
     {

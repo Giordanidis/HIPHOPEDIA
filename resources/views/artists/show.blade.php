@@ -8,15 +8,16 @@
       <div class="col-sm-12">
         <h2>{{ $artist->name }}</h2>
         <hr>
-        <h3>Albums</h3>
-
-        <nav class="nav flex-column">
+        {{-- Moved to  --}}
+        {{-- <h3>Albums</h3> --}}
+        {{-- <nav class="nav flex-column">
           @foreach ($artist->albums as $album)
           <a class="nav-link" href="{{ $artist->path() }}/albums/{{ $album->slug }}">{{ $album->title }}</a>
           @endforeach
-        </nav>
-        
-        <p><a class="btn btn-secondary" href="/artists/{{ $artist->slug }}/edit" role="button">Edit &raquo;</a></p>
+        </nav> --}}
+        <p>Location: {{ $artist->location }}</p>
+        <p><a class="btn btn-secondary" href="/artists/{{ $artist->slug }}/edit" role="button">Edit Artist &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="/artists/{{ $artist->slug }}/albums" role="button">View Albums &raquo;</a></p>
       </div>
     </div>
 

@@ -45,3 +45,12 @@ Route::get('/artists/{artist}/albums', 'AlbumsController@index')->name('albums.i
 
 // GET A SINGLE ALBUM OF A SINGLE ARTIST
 Route::get('/artists/{artist}/albums/{album}', 'AlbumsController@show')->name('albums.show');
+
+// CREATE A NEW ALBUM
+Route::get('/albums/create', 'AlbumsController@create');
+
+// STORE A NEW ALBUM
+Route::post('/albums', 'AlbumsController@store');
+
+// GET ALL TRACKS OF A SINGLE ALBUM
+Route::get('/artists/{$artist}/albums/{$album}', 'TracksController@show')->name('tracks.show');

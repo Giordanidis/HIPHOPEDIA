@@ -32,6 +32,19 @@
             @enderror
         </div>
 
+        <div class="form-group">
+            <label for="">Artist Location</label>
+            <input
+                class="form-control @error('location') form-control-highlight @enderror"
+                name="location"
+                type="text"
+                value="{{ old('location') }}"
+                required>
+            @error('location')
+                <p class="alert alert-danger  alert-danger">{{ $errors->first('location') }}</p>
+            @enderror
+        </div>
+
         <button class="btn btn-primary" type="submit">Create Artist</button>
     </form>
 </div>

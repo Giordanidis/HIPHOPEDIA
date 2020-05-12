@@ -22,5 +22,6 @@ $factory->define(Artist::class, function (Faker $faker) {
         'name' => $faker->name,
         // 'artist_id' => $faker->unique()->randomDigit,
         'slug' => $faker->slug,
+        'location' => $faker->city,
     ];
 });

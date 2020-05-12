@@ -91,7 +91,8 @@ class ArtistsController extends Controller
     protected function validateArtist(){
         return request()->validate([
             'name' => 'required',
-            'slug' => 'required'
+            'slug' => 'required',
+            'location' => 'required'
         ]);
     }
 }
